@@ -74,6 +74,7 @@ def collection_save_document_by_id(name, docid):
     if os.path.exists(fp):
         ls = ioutils.loadJson(fp)
 
+    doc['_id'] = docid
     for i in range(len(ls)):
         if ls[i]['_id'] == docid:
             ls[i] = doc
