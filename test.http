@@ -1,0 +1,34 @@
+### CLEAR
+DELETE http://localhost:5100/collection/test
+
+
+### get all documents in collection TEST
+GET http://localhost:5100/collection/test
+
+
+### add sample document to collection TEST
+PUT http://localhost:5100/collection/test
+Content-Type: application/json
+
+{
+    "id": "doc1",
+    "title":"Document One"
+}
+
+### Get document by ID
+GET http://localhost:5100/collection/test/2739b1e63eb14e1f828df9669e70b553
+
+
+
+### Update document by ID
+POST http://localhost:5100/collection/test/2739b1e63eb14e1f828df9669e70b553
+Content-Type: application/json
+
+{
+    "id": "doc1",
+    "title":"Document One",
+    "content": "This is updated document"
+}
+
+### delete doc by ID
+DELETE http://localhost:5100/collection/test/2739b1e63eb14e1f828df9669e70b553
